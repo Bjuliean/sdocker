@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  mini-server-6: 
+    build: .
+  nginx-proxy:
+    image: nginx
+    ports: 
+      - 80:8080
+    volumes:
+      - ./nginx/nginx_part6.conf:/etc/nginx/nginx.conf
